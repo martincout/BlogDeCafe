@@ -193,7 +193,7 @@ h4 {
     }
 }
 
-/**Opcional */
+/**Principal */
 .entrada{
     margin-bottom: 3rem;
     border-bottom: 1px solid #e1e1e1;
@@ -212,7 +212,7 @@ h4 {
     list-style: none;
 }
 .curso{
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #e1e1e1;
 }
 .curso:last-of-type{
