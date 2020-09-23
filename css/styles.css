@@ -91,22 +91,22 @@ h4 {
     height: 60rem;
 }
 
-.site-header a {
+
+/** Navegacion */
+
+.barra a{
     color: white;
     text-decoration: none;
 }
 
-.site-header h1{
+.barra h1{
     text-align: center;
     font-weight: 400;
-
-
 }
-.site-header h1 span{
+
+.barra h1 span{
     font-weight: 700;
 }
-
-/** Navegacion */
 
 @media (min-width : 768px) {
     .barra{
@@ -226,6 +226,16 @@ h4 {
 .cursos span{
     font-weight: 400;
 }
+
+
+/** Footer */
+
+footer{
+    background-color: #000000;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
 
 
 /* 
