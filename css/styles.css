@@ -15,6 +15,7 @@ body {
 img {
     max-width: 100%;
 }
+
 .contenedor {
     width: 95%;
     max-width: 120rem; /** = 1200px; **/
@@ -30,12 +31,14 @@ h1 {
 }
 h2 {
     font-size: 4rem;
+    line-height: 1.2;
 }
 h3 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
 }
 h4 {
-    font-size: 2rem;
+    font-size: 2.8rem;
+    
 }
 
 
@@ -50,6 +53,54 @@ h4 {
     margin: 0;
 }
 
+/** Grid */
+
+@media (min-width : 768px) {
+    .grid{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .columnas-6{
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+}
+
+/** Botones */
+
+.btn{
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    font-family: "PT Sans",sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .btn{
+        display: inline-block;
+    }
+}
+
+.btn-primary{
+    background-color: black;
+}
+
+.btn-secondary{
+    background-color: #784d3c;
+}
+
 
 /** Header */
 
@@ -61,22 +112,22 @@ h4 {
     height: 60rem;
 }
 
-.site-header a {
+
+/** Navegacion */
+
+.barra a{
     color: white;
     text-decoration: none;
 }
 
-.site-header h1{
+.barra h1{
     text-align: center;
     font-weight: 400;
-
-
 }
-.site-header h1 span{
+
+.barra h1 span{
     font-weight: 700;
 }
-
-/** Navegacion */
 
 @media (min-width : 768px) {
     .barra{
@@ -132,3 +183,102 @@ h4 {
     font-size: 2.2rem;   
 }
 
+/** Principal */
+
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.blog,
+.cursos{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.cursos{
+    order: -1;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 5rem);
+        order: 2;
+    }
+}
+
+/**Principal */
+.entrada{
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.entrada:last-of-type{
+    border-bottom: none;
+}
+
+.entrada img{
+    width: 100%;
+}
+
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+}
+
+.cursos{
+    border-left: 1px solid #e1e1e1;
+    padding-left: 3rem;
+}
+
+.curso{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 3rem;
+}
+.curso:last-of-type{
+    border-bottom: none;
+}
+
+.curso p{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+}
+.curso p span,
+.curso p.descripcion{
+    font-weight: 400;
+}
+
+.curso img{
+    height: auto;
+}
+
+/** Footer */
+
+footer{
+    background-color: #000000;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+/** INTERNAS */
+
+
+/* 
+.entrada .imagen{
+    flex: 0 0 calc(60% - 2rem);
+}
+
+.entrada .contenido-blog{
+    flex: 0 0 calc(40%);
+} */
+
+/** grid-template-columns recordatorio: 50% 50%; 100px 100px; 1fr 1fr
