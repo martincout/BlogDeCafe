@@ -53,23 +53,44 @@ h4 {
     margin: 0;
 }
 
-/** Grid */
+/** GRID */
+
+/** 
+El Grid divide en 12 columnas al 100% del espacio.
+
+100% / 12 = 8.33 
+
+Ej: 8.33 * 10 columnas = 83.3%
+
+*/
 
 @media (min-width : 768px) {
     .grid{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    .columnas-6{
-        flex: 0 0 calc(50% - 2rem);
+    .centrar-columnas{
+        justify-content: center;
     }
 
     .columnas-4{
         flex: 0 0 calc(33.3% - 1rem);
     }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
     .columnas-8{
         flex: 0 0 calc(66.6% - 1rem);
+    }
+
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+
+    .columnas-12{
+        flex: 0 0 100%;
     }
 }
 
@@ -86,10 +107,12 @@ h4 {
     font-family: "PT Sans",sans-serif;
     text-transform: uppercase;
     font-size: 2rem;
+    flex: 0 0 100%;
 }
 @media (min-width: 768px) {
     .btn{
         display: inline-block;
+        flex: 0 0 auto;
     }
 }
 
@@ -99,6 +122,10 @@ h4 {
 
 .btn-secondary{
     background-color: #784d3c;
+}
+
+.btn:hover{
+    cursor: pointer;
 }
 
 
@@ -271,6 +298,43 @@ footer{
 
 /** INTERNAS */
 
+/** CONTACTO */
+
+.formulario-contacto{
+    background-color: #ffffff;
+    padding: 5rem;
+}
+
+
+@media (min-width: 768px) {
+    .formulario-contacto{
+        margin-top: -10rem;
+    }
+}
+
+.formulario-contacto .campo{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.formulario-contacto label{
+    flex: 0 0 8rem;
+}
+
+.formulario-contacto input:not([type="submit"]),
+.formulario-contacto textarea{
+    flex-grow: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto .enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 
 /* 
 .entrada .imagen{
@@ -281,4 +345,4 @@ footer{
     flex: 0 0 calc(40%);
 } */
 
-/** grid-template-columns recordatorio: 50% 50%; 100px 100px; 1fr 1fr
+/** grid-template-columns recordatorio: 50% 50%; 100px 100px; 1fr 1fr */
