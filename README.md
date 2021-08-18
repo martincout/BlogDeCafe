@@ -1,2 +1,6 @@
 # BlogDeCafe
-Una página web básica y sencilla. Diseño realizado por JuanDeLaTorres
+Una página web estilo blog, sencilla y simple.
+
+https://martincou29.github.io/BlogDeCafe/
+
+Diseño realizado por JuanDeLaTorres
